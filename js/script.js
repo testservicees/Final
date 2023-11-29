@@ -167,7 +167,6 @@ function save() {
    database.ref('users/' + username).set({
       name: name,
       email: email,
-      password: password,
       username:username
    })
 
