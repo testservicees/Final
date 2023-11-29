@@ -180,7 +180,7 @@ function get() {
    ref.once("value") 
       .then(function (snapshot) {
          name1 = snapshot.child("name").val(); 
-         alert(name1);
+         // alert(name1);
          var passuser = username;
          sessionStorage.setItem("user", username);
          var passdata = name1;
