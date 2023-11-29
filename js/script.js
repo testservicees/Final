@@ -176,12 +176,11 @@ function save() {
 var name1;
 function get() {
    var username = document.getElementById("lusername").value;
-   // var email = document.getElementById("lemail").value;
 
    var ref = firebase.database().ref("users/"+username);
    ref.once("value") 
       .then(function (snapshot) {
-         name1 = snapshot.child("name").val(); // {first:"Ada",last:"Lovelace"}
+         name1 = snapshot.child("name").val(); 
          alert(name1);
          var passuser = username;
          sessionStorage.setItem("user", username);
@@ -204,7 +203,6 @@ function update () {
 
    alert('sucess');
 
-   //to show name again;
    var ref = firebase.database().ref("users/"+username);
    ref.once("value") 
       .then(function (snapshot) {

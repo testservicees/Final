@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         console.log('Good');
     
     }
-    else if(document.getElementById('cemail').value == "lakshyajain.14022@gmail.com"){
+    else if(document.getElementById('cemail').value == "testmail14025@gmail.com"){
         admin(email,password);
         return;
     }
