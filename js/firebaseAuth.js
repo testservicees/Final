@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const email = document.getElementById('cemail').value;
     const password = document.getElementById('cpassword').value;
 
-    if(document.getElementById('cemail').value == "lakshyajain.1944@gmail.com"){
+    if(document.getElementById('cemail').value == "shivanshgoyal220903@gmail.com"){
         console.log('Good');
     
     }
