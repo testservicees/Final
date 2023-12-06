@@ -247,7 +247,7 @@ function registerSpotlight () {
 
    let cnf = prompt('Enter Yes To Conform');
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'spotlight/' + username ).set({
          username: username,
@@ -266,7 +266,7 @@ function registerDuolouge () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Duolouge/' + username ).set({
          username: username,
@@ -285,7 +285,7 @@ function inkiit () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Inkiit/' + username ).set({
          username: username,
@@ -304,7 +304,7 @@ function cricketInterYear () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Cricket/' + username ).set({
          username: username,
@@ -324,7 +324,7 @@ function BasketballInterYear () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'basketball/' + username ).set({
          username: username,
@@ -344,7 +344,7 @@ function polygon () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'polygon Guide/' + username ).set({
          username: username,
@@ -363,7 +363,7 @@ function web3Talks () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Web3 Talk/' + username ).set({
          username: username,
@@ -382,7 +382,7 @@ function Dules () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Dules/' + username ).set({
          username: username,
@@ -401,7 +401,7 @@ function Enigma () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Enigma/' + username ).set({
          username: username,
@@ -420,7 +420,7 @@ function avegGrp () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Aaveg/' + username ).set({
          username: username,
@@ -439,7 +439,7 @@ function odeum () {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Odeum/' + username ).set({
          username: username,
@@ -458,7 +458,7 @@ function throughTheLens() {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Through The Lenses/' + username ).set({
          username: username,
@@ -477,7 +477,7 @@ function photoWorkshop() {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Photography Workshop/' + username ).set({
          username: username,
@@ -496,7 +496,7 @@ function sharkTank() {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'Shark Tank LNM/' + username ).set({
          username: username,
@@ -515,7 +515,7 @@ function startUp() {
    let cnf = prompt('Enter Yes To Conform');
    var username = sessionStorage.getItem("usernameverification");
 
-   if(cnf == 'Yes' || 'yes'){
+   if(cnf.toLowerCase() === 'yes'){
 
       database.ref('events/' + 'StartUp Weekend/' + username ).set({
          username: username,
@@ -576,7 +576,7 @@ function checkDataExistence() {
    var inputField = document.getElementById('name').value;
    
    var inputValue = inputField;
-     var isValid = /^[a-zA-Z0-9\s]*$/.test(inputValue);
+     var isValid = /^[a-zA-Z\s]*$/.test(inputValue);
 
      if (isValid) 
      {
@@ -592,7 +592,7 @@ function checkDataExistence() {
    var inputField = document.getElementById('upname').value;
    
    var inputValue = inputField;
-     var isValid = /^[a-zA-Z0-9\s]*$/.test(inputValue);
+     var isValid = /^[a-zA-Z\s]*$/.test(inputValue);
 
      if (isValid) 
      {
