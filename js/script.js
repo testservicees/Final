@@ -616,7 +616,12 @@ function checkDataExistence() {
 
 }
 
-
+document.addEventListener("DOMContentLoaded", function() {
+   var registerButton = document.getElementsByClassName('option-btn')[1];
+   if (registerButton) {
+     registerButton.style.display = "none";
+   }
+ });
  
 
 
