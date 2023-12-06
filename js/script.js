@@ -173,8 +173,11 @@ function save() {
 }
 
 var name1;
+var usernameverification;
 function get() {
    var username = document.getElementById("lusername").value;
+   usernameverification = username;
+   sessionStorage.setItem("usernameverification" , usernameverification);
 
    var ref = firebase.database().ref("users/"+username);
    ref.once("value") 
@@ -240,152 +243,290 @@ function sendEmail() {
 
 function registerSpotlight () {
 
-   let username = prompt('Enter Your Username To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'spotlight/' + username ).set({
-      username: username,
-   }) 
-   location.reload(); 
+   let cnf = prompt('Enter Yes To Conform');
+
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'spotlight/' + username ).set({
+         username: username,
+      }) 
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function registerDuolouge () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Duolouge/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Duolouge/' + username ).set({
+         username: username,
+      })   
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function inkiit () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Inkiit/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Inkiit/' + username ).set({
+         username: username,
+      })   
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function cricketInterYear () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Cricket/' + username ).set({
-      username: username,
-   })
-   location.reload();    
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Cricket/' + username ).set({
+         username: username,
+      })
+      location.reload();  
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+
+     
 }
 
 function BasketballInterYear () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'basketball/' + username ).set({
-      username: username,
-   })  
-   location.reload();  
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'basketball/' + username ).set({
+         username: username,
+      })  
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+
+    
 }
 
 function polygon () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'polygon Guide/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'polygon Guide/' + username ).set({
+         username: username,
+      })   
+      location.reload();
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+    
 }
 
 function web3Talks () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Web3 Talk/' + username ).set({
-      username: username,
-   })  
-   location.reload();  
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Web3 Talk/' + username ).set({
+         username: username,
+      })  
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+    
 }
 
 function Dules () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Dules/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Dules/' + username ).set({
+         username: username,
+      })   
+      location.reload();  
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function Enigma () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Enigma/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Enigma/' + username ).set({
+         username: username,
+      })   
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function avegGrp () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Aaveg/' + username ).set({
-      username: username,
-   }) 
-   location.reload();   
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Aaveg/' + username ).set({
+         username: username,
+      }) 
+      location.reload(); 
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+      
 }
 
 function odeum () {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Odeum/' + username ).set({
-      username: username,
-   }) 
-   location.reload();   
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Odeum/' + username ).set({
+         username: username,
+      }) 
+      location.reload();  
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+    
 }
 
 function throughTheLens() {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Through The Lenses/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Through The Lenses/' + username ).set({
+         username: username,
+      })   
+      location.reload();   
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function photoWorkshop() {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Photography Workshop/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Photography Workshop/' + username ).set({
+         username: username,
+      })   
+      location.reload();  
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function sharkTank() {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'Shark Tank LNM/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'Shark Tank LNM/' + username ).set({
+         username: username,
+      })   
+      location.reload();   
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 function startUp() {
 
-   let username = prompt('Enter Your Username To Conform');
+   let cnf = prompt('Enter Yes To Conform');
+   var username = sessionStorage.getItem("usernameverification");
 
-   database.ref('events/' + 'StartUp Weekend/' + username ).set({
-      username: username,
-   })   
-   location.reload(); 
+   if(cnf == 'Yes' || 'yes'){
+
+      database.ref('events/' + 'StartUp Weekend/' + username ).set({
+         username: username,
+      })   
+      location.reload();   
+   }
+   else{
+      alert('Registration Failed');
+   }
+
+   
 }
 
 
@@ -461,6 +602,19 @@ function checkDataExistence() {
        alert('Invalid Input');
      };
  }
+
+ function checkUsernameInContact() {
+
+   var username = sessionStorage.getItem("usernameverification");
+   var userInputUsername = document.getElementById('conusername').value;
+   if(userInputUsername == username ){
+       sendEmail();
+   }
+   else{
+       alert('username not matched');
+   }
+
+}
 
 
  

@@ -73,14 +73,12 @@ function sendMessage(userId) {
     const message = messageInput.value;
 
     if (message.trim() !== '') {
-        // Store the message in Realtime Database
         const messagesRef = firebase.database().ref('messages/' + userId);
         messagesRef.push({
             text: message,
             timestamp: firebase.database.ServerValue.TIMESTAMP
         });
 
-        // Clear the message input
         messageInput.value = '';
     }
 }
@@ -90,3 +88,5 @@ function logout() {
         window.location.href = 'cordilogin.html';
     });
 }
+
+
