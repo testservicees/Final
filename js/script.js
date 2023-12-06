@@ -411,6 +411,61 @@ function checkDataExistence() {
      });
  }
 
+ function checkUserExistence() {
+   var username = document.getElementById('username').value;
+   var dataToCheck = document.getElementById('username').value;
+   const dataRef = database.ref("users" );
+   dataRef.once("value")
+     .then((snapshot) => {
+       // Check if the data exists
+       if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+         console.log(`Data "${dataToCheck}" exists in the database.`);
+         alert('Username Exist');
+       } else {
+         console.log(`Data "${dataToCheck}" does not exist in the database.`);
+         restrictSpecialCharacters();
+       }
+     })
+     .catch((error) => {
+       console.error("Error reading data:", error);
+     });
+ }
+
+ function restrictSpecialCharacters() {
+   var inputField = document.getElementById('name').value;
+   
+   var inputValue = inputField;
+     var isValid = /^[a-zA-Z0-9\s]*$/.test(inputValue);
+
+     if (isValid) 
+     {
+      save();
+      SignUp();
+     } else 
+     {
+       alert('Invalid Input');
+     };
+ }
+
+ function restrictSpecialCharactersInProfile() {
+   var inputField = document.getElementById('upname').value;
+   
+   var inputValue = inputField;
+     var isValid = /^[a-zA-Z0-9\s]*$/.test(inputValue);
+
+     if (isValid) 
+     {
+      update();
+     } else 
+     {
+       alert('Invalid Input');
+     };
+ }
+
+
+ 
+
+
 
 
 
