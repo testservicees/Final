@@ -39,13 +39,5 @@
     width: 20rem;
 }
 
-#messageList{
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: #fff;
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
 
 

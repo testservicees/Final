@@ -93,14 +93,24 @@ window.onscroll = () => {
 const SignUp = () => {
    const email = document.getElementById("email").value;
    const password = document.getElementById("password").value;
+
+   // Regular expression for two specific domains (@gmail.com and @lnmiit.ac.in)
+   const domainRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|lnmiit\.ac\.in)$/;
+
+   if (!domainRegex.test(email)) {
+      alert("Invalid email domain. Please use a valid email address from @gmail.com or @lnmiit.ac.in.");
+      return;
+   }
+
    console.log(email, password);
+
    firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((result) => {
          // Signed in
-         alert("SignUp Successfull");
+         alert("SignUp Successful");
          window.location.assign("login.html");
          console.log(result);
-         // ...
+         save();
       })
       .catch((error) => {
          var errorCode = error.code;
@@ -109,6 +119,9 @@ const SignUp = () => {
          // ..
       });
 }
+
+
+
 
 const SignIn = () => {
    const email = document.getElementById("lemail").value;
@@ -129,7 +142,7 @@ const SignIn = () => {
          alert(errorMessage);
       });
 }
-
+ 
 
 const SignOut = () => {
    firebase.auth().signOut().then((result) => {
@@ -564,7 +577,7 @@ function checkDataExistence() {
          alert('Username Exist');
        } else {
          console.log(`Data "${dataToCheck}" does not exist in the database.`);
-         restrictSpecialCharacters();
+         SignUp();
        }
      })
      .catch((error) => {
@@ -580,11 +593,10 @@ function checkDataExistence() {
 
      if (isValid) 
      {
-      save();
-      SignUp();
+      checkUserExistence();
      } else 
      {
-       alert('Invalid Input');
+       alert('Invalid Name, only enter alphabets');
      };
  }
 
@@ -599,7 +611,7 @@ function checkDataExistence() {
       update();
      } else 
      {
-       alert('Invalid Input');
+       alert('Invalid Name, only enter alphabets');
      };
  }
 

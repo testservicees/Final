@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#8e44ad;
+   --main-color:#4452ad;
    --red:#e74c3c;
    --orange:#f39c12;
    --light-color:#888;
    --light-bg:#eee;
    --black:#2c3e50;
-   --white:#fff;
+   --white:#ede1e1;
    --border:.1rem solid rgba(0,0,0,.2);
 }
 
@@ -1294,6 +1294,36 @@ section{
    flex-direction: column;
    flex-wrap: wrap;
    align-items: flex-start;
+}
+
+
+#messageList{
+   justify-content: flex-start;
+   align-items: flex-start;
+   color: var(--black);
+   font-size: 2rem;
+   padding-left: 2rem;
+}
+
+button {
+   cursor: pointer;
+   padding: 8px 12px;
+   margin-left: 10px;
+   font-size: 14px;
+   border: none;
+   border-radius: 4px;
+   background-color: var(--light-color);
+}
+
+button.approve {
+   background-color: #4CAF50;
+   color: var(--black);
+}
+
+
+button.disapprove {
+   background-color: #FF5733;
+   color: var(--black);
 }
 
 
